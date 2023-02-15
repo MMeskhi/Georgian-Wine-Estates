@@ -77,7 +77,6 @@ a {
     font-style: normal;
     font-weight: 400;
     font-size: 2.4rem;
-    line-height: 21px;
     font-feature-settings: 'case'on;
 }
 
@@ -149,10 +148,6 @@ header nav {
     align-items: center;
 }
 
-header nav a:hover {
-    opacity: 0.8;
-}
-
 header nav ul {
     display: flex;
     justify-content: center;
@@ -164,7 +159,43 @@ header nav ul li a:hover {
     color: var(--secondary);
 }
 
-header nav button {}
+header nav .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 21px;
+    height: auto;
+    cursor: pointer;
+}
+
+header nav .hamburger:hover .stripe {
+    background-color: var(--secondary);
+}
+
+header nav .stripe {
+    width: 21px;
+    height: 3px;
+    background-color: #FFFFFF;
+    margin: 3px 0;
+    transition: transform 0.3s ease;
+}
+
+header nav .stripe:first-child {
+    transform-origin: center bottom;
+}
+
+header nav .stripe:last-child {
+    transform-origin: center top;
+}
+
+header nav .hamburger.active .stripe:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+header nav .hamburger.active .stripe:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
 
 .main-hero {
     height: 100vh;

@@ -15,6 +15,13 @@ window.onscroll = function (event) {
   }
 };
 
+//Navbar
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+
 //Sliders
 const swiper = new Swiper(".main-hero .mySwiper", {
   autoplay: {
