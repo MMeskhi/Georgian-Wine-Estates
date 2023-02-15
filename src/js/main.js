@@ -19,6 +19,7 @@ window.onscroll = function (event) {
 const swiper = new Swiper(".main-hero .mySwiper", {
   autoplay: {
     delay: 8000,
+    disableOnInteraction: false,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -30,6 +31,7 @@ const swiper2 = new Swiper(".slider-wine .mySwiper", {
   spaceBetween: 20,
   autoplay: {
     delay: 4000,
+    disableOnInteraction: false,
   },
   breakpoints: {
     300: {

@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Helvetica Neue LT GEO';
+    src: url("../fonts/HELVETICANEUELTGEO-55ROMAN.TTF");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GA Ptskari';
+    src: url(../fonts/GA-Ptskari.eot);
+    src: url(../fonts/GA-Ptskari.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/GA-Ptskari.otf) format('otf'),
+        url(../fonts/GA-Ptskari.svg#GA%20Ptskari%20Regular) format('svg'),
+        url(../fonts/GA-Ptskari.ttf) format('truetype'),
+        url(../fonts/GA-Ptskari.woff) format('woff'),
+        url(../fonts/GA-Ptskari.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'GA ArtDeco';
+    src: url(../fonts/GA-ArtDeco.eot);
+    src: url(../fonts/GA-ArtDeco.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/GA-ArtDeco.otf) format('otf'),
+        url(../fonts/GA-ArtDeco.svg#GA%20Ptskari%20Regular) format('svg'),
+        url(../fonts/GA-ArtDeco.ttf) format('truetype'),
+        url(../fonts/GA-ArtDeco.woff) format('woff'),
+        url(../fonts/GA-ArtDeco.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'GA Apkhazeti';
+    src: url(../fonts/GA-Apkhazeti.eot);
+    src: url(../fonts/GA-Apkhazeti.eot?#iefix) format('embedded-opentype'),
+        url(../fonts/GA-Apkhazeti.otf) format('otf'),
+        url(../fonts/GA-Apkhazeti.svg#GA%20Ptskari%20Regular) format('svg'),
+        url(../fonts/GA-Apkhazeti.ttf) format('truetype'),
+        url(../fonts/GA-Apkhazeti.woff) format('woff'),
+        url(../fonts/GA-Apkhazeti.woff2) format('woff2');
+}
