@@ -1,9 +1,48 @@
 //Preload no transitions
 document.body.classList.remove("preload");
 
-const header = document.getElementsByTagName("header")[0];
+//Navbar
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+
+const sidebar = document.querySelector("aside");
+const noScroll = document.querySelector("body");
+const headerFill = document.querySelector("header");
+
+function openSidebar() {
+  sidebar.classList.toggle("aside-active");
+  noScroll.classList.toggle("no-scroll");
+  header.classList.toggle("header-active");
+}
+
+hamburger.addEventListener("click", openSidebar);
+
+//Language switcher
+const langSwitcher = document.querySelectorAll(".lang");
+const langMain = document.querySelector(".main-lang");
+const langMainM = document.querySelector(".navbar-mobile .lang");
+
+function langSwitchFn() {
+  langSwitcher.forEach((el) => {
+    el.addEventListener(
+      "click",
+      () => {
+        el.classList.toggle("active");
+        el.classList.toggle("lang-not");
+      },
+      true
+    );
+  });
+}
+
+langSwitchFn();
 
 // trigger this function every time the user scrolls
+const header = document.getElementsByTagName("header")[0];
+
 window.onscroll = function (event) {
   var scroll = window.pageYOffset;
   if (scroll < 200) {
@@ -14,13 +53,6 @@ window.onscroll = function (event) {
     header.style.boxShadow = "0px 4px 8px 2px rgba(9,24,41,0.4)";
   }
 };
-
-//Navbar
-const hamburger = document.querySelector(".hamburger");
-
-hamburger.addEventListener("click", function () {
-  this.classList.toggle("active");
-});
 
 //Sliders
 const swiper = new Swiper(".main-hero .mySwiper", {
@@ -42,7 +74,7 @@ const swiper2 = new Swiper(".slider-wine .mySwiper", {
   },
   breakpoints: {
     300: {
-      slidesPerView: 1.5,
+      slidesPerView: 1.1,
     },
     700: {
       slidesPerView: 2,
