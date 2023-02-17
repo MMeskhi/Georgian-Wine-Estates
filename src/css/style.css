@@ -284,7 +284,7 @@ aside {
     left: 0;
     bottom: 0;
     z-index: 5;
-    transform: translateX(1600px);
+    transform: translateX(8000px);
 
     background-color: var(--primary);
     padding: 56px 0 56px 0;
