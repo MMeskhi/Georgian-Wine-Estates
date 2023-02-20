@@ -23,7 +23,7 @@ hamburger.addEventListener("click", openSidebar);
 //Language switcher
 const langSwitcher = document.querySelectorAll(".lang");
 const langMain = document.querySelector(".main-lang");
-const langMainM = document.querySelector(".navbar-mobile .lang");
+const langMainM = document.querySelector(".aside-cont .main-lang");
 
 function langSwitchFn() {
   langSwitcher.forEach((el) => {
@@ -39,6 +39,18 @@ function langSwitchFn() {
 }
 
 langSwitchFn();
+
+//Click outside of lang switcher to close
+document.addEventListener("click", (e) => {
+  if (!langMain.contains(e.target)) {
+    langMain.classList.remove("active");
+    langMain.classList.add("lang-not");
+  }
+  if (!langMainM.contains(e.target)) {
+    langMainM.classList.remove("active");
+    langMainM.classList.add("lang-not");
+  }
+});
 
 // trigger this function every time the user scrolls
 const header = document.getElementsByTagName("header")[0];
