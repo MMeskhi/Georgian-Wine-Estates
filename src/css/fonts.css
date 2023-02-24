@@ -7,6 +7,14 @@
 }
 
 @font-face {
+    font-family: 'Poppins';
+    src: url("../fonts/Poppins-Medium.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'GA Ptskari';
     src: url(../fonts/GA-Ptskari.eot);
     src: url(../fonts/GA-Ptskari.eot?#iefix) format('embedded-opentype'),
