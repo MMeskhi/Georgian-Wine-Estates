@@ -77,16 +77,17 @@ anime.timeline({ loop: false }).add({
   targets: ".ml3 .letter",
   opacity: [0, 1],
   easing: "easeInOutQuad",
-  duration: 100,
-  delay: (el, i) => 150 * (i + 1),
+  duration: 60,
+  delay: (el, i) => 60 * (i + 1),
 });
 
 //Sliders
 const swiper = new Swiper(".main-hero .mySwiper", {
   autoplay: {
-    delay: 8000,
+    delay: 6000,
     disableOnInteraction: false,
   },
+  speed: 600,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -96,9 +97,10 @@ const swiper = new Swiper(".main-hero .mySwiper", {
 const swiper2 = new Swiper(".slider-wine .mySwiper", {
   spaceBetween: 20,
   autoplay: {
-    delay: 4000,
+    delay: 3000,
     disableOnInteraction: false,
   },
+  speed: 300,
   breakpoints: {
     300: {
       slidesPerView: 1.1,

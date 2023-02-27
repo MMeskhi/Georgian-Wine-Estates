@@ -153,6 +153,40 @@ a[aria-current="page"] {
 }
 
 /* Header */
+.mainPage header,
+.mainPage .swiper-button-next,
+.mainPage .main-hero .swiper-slide .slider-text p {
+    animation: fadeIn 2s;
+}
+
+.mainPage .swiper-button-prev {
+    animation: fadeInBtn 2s;
+}
+
+@keyframes fadeIn {
+
+    0%,
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBtn {
+
+    0%,
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .35;
+    }
+}
+
 header {
     background: rgba(9, 24, 41, 0.9);
     z-index: 99;
@@ -305,7 +339,7 @@ aside {
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 5;
+    z-index: 99;
     transform: translateX(8000px);
 
     background-color: var(--primary);
@@ -590,7 +624,7 @@ main {
     background: #CB9A4F;
     color: #FFFFFF;
     border-radius: 130px;
-    font-size: 1.3rem;
+    font-size: 13px;
 }
 
 .history .history-cont .history-cont-right button:hover {
@@ -675,7 +709,7 @@ main {
     background: #CB9A4F;
     color: #FFFFFF;
     border-radius: 130px;
-    font-size: 1.3rem;
+    font-size: 13px;
 }
 
 .about .about-cont button:hover {
@@ -803,8 +837,13 @@ footer .footer-cont .footer-last .social:hover,
         display: none;
     }
 
+
     aside .aside-cont .lang {
         height: 24px;
+    }
+
+    aside .aside-cont .lang a:nth-child(1) {
+        pointer-events: unset;
     }
 
     aside ul .active a:nth-child(1)::after {
@@ -1081,7 +1120,7 @@ footer .footer-cont .footer-last .social:hover,
     background: #CB9A4F;
     color: #FFFFFF;
     border-radius: 130px;
-    font-size: 1.3rem;
+    font-size: 13px;
 }
 
 .products-ext-page-cont .products-ext-box button:hover {
