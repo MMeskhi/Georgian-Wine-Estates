@@ -67,52 +67,68 @@ window.onscroll = function (event) {
 };
 
 //Hero slider text animation
-const textWrapper = document.querySelector(".ml3");
-textWrapper.innerHTML = textWrapper.textContent.replace(
-  /\S/g,
-  "<span class='letter'>$&</span>"
-);
+if (document.getElementById("mainPage")) {
+  const textWrapper = document.querySelector(".ml3");
+  textWrapper.innerHTML = textWrapper.textContent.replace(
+    /\S/g,
+    "<span class='letter'>$&</span>"
+  );
 
-anime.timeline({ loop: false }).add({
-  targets: ".ml3 .letter",
-  opacity: [0, 1],
-  easing: "easeInOutQuad",
-  duration: 60,
-  delay: (el, i) => 60 * (i + 1),
-});
+  anime.timeline({ loop: false }).add({
+    targets: ".ml3 .letter",
+    opacity: [0, 1],
+    easing: "easeInOutQuad",
+    duration: 60,
+    delay: (el, i) => 60 * (i + 1),
+  });
+}
 
 //Sliders
-const swiper = new Swiper(".main-hero .mySwiper", {
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
-  speed: 600,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+if (document.getElementById("mainPage")) {
+  const swiper = new Swiper(".main-hero .mySwiper", {
+    autoplay: {
+      delay: 6000,
+      disableOnInteraction: false,
+    },
+    speed: 600,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
 
-const swiper2 = new Swiper(".slider-wine .mySwiper", {
-  spaceBetween: 20,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  speed: 300,
-  breakpoints: {
-    300: {
-      slidesPerView: 1.1,
+if (document.querySelectorAll("mainPage, slider")) {
+  const swiper2 = new Swiper(".slider-wine .mySwiper", {
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
     },
-    700: {
-      slidesPerView: 2,
+    speed: 300,
+    breakpoints: {
+      300: {
+        slidesPerView: 1.1,
+      },
+      700: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 3,
+      },
+      1400: {
+        slidesPerView: 4,
+      },
     },
-    1024: {
-      slidesPerView: 3,
+  });
+}
+
+if (document.getElementById("slider")) {
+  const swiper3 = new Swiper(".product-main-slider .mySwiper", {
+    speed: 300,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-    1400: {
-      slidesPerView: 4,
-    },
-  },
-});
+  });
+}

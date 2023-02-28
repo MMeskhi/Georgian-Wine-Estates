@@ -121,6 +121,12 @@ img {
     margin: 0 auto;
 }
 
+.container-c {
+    max-width: 1920px;
+    width: 50%;
+    margin: 0 auto;
+}
+
 .pg {
     padding: 140px 0 60px 0;
 }
@@ -154,13 +160,16 @@ a[aria-current="page"] {
 
 /* Header */
 .mainPage header,
-.mainPage .swiper-button-next,
-.mainPage .main-hero .swiper-slide .slider-text p {
+.mainPage .swiper-button-next {
     animation: fadeIn 2s;
 }
 
 .mainPage .swiper-button-prev {
     animation: fadeInBtn 2s;
+}
+
+.mainPage .main-hero .swiper-slide .slider-text p {
+    animation: fadeIn 3s;
 }
 
 @keyframes fadeIn {
@@ -1481,4 +1490,97 @@ footer .footer-cont .footer-last .social:hover,
         max-width: none;
         height: 321px;
     }
+}
+
+
+/* Products Internal Page */
+.product-int-page .product-main-slider {
+    position: relative;
+}
+
+.product-int-page .product-main-slider .swiper {
+    max-width: 984px;
+    width: 100%;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide {
+    height: 788px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt h2 {
+    font-size: 5.6rem;
+    color: #FFFFFF;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt p {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.7);
+
+    max-width: 329px;
+    width: 100%;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt span {
+    font-family: 'FiraGO';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    font-feature-settings: 'case'on;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt .abt-listing {
+    margin-top: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt .abt-listing .abt-list {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(217, 217, 217, 0.1);
+    padding-bottom: 10px;
+}
+
+.product-int-page .product-main-slider .swiper .swiper-wrapper .swiper-slide .product-main-abt .abt-listing .abt-list span {
+    font-family: 'Helvetica Neue LT GEO';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.product-int-page .slider-wine {
+    margin: 160px auto 0 auto;
+}
+
+.product-int-page .slider-wine h2 {
+    font-family: 'GA Ptskari';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 6.4rem;
+    color: #FFFFFF;
+
+    text-align: center;
+    margin-bottom: 48px;
 }
