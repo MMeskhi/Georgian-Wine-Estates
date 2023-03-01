@@ -15,6 +15,22 @@
 }
 
 @font-face {
+    font-family: "FiraGO";
+    src: url("../fonts/FiraGO-Medium.otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FiraGO italic";
+    src: url("../fonts/FiraGO-MediumItalic.otf");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
     font-family: 'GA Ptskari';
     src: url(../fonts/GA-Ptskari.eot);
     src: url(../fonts/GA-Ptskari.eot?#iefix) format('embedded-opentype'),

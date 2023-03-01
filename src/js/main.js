@@ -125,6 +125,7 @@ if (document.querySelectorAll("mainPage, slider")) {
 
 if (document.getElementById("slider")) {
   const swiper3 = new Swiper(".product-main-slider .mySwiper", {
+    spaceBetween: 16,
     speed: 300,
     navigation: {
       nextEl: ".swiper-button-next",
