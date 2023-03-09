@@ -520,7 +520,7 @@ main {
 }
 
 .swiper-button-prev {
-    transform: rotate(180deg) translate(0, 25%);
+    transform: rotate(180deg);
 }
 
 .slider-wine {
