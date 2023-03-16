@@ -59,10 +59,8 @@ window.onscroll = function (event) {
   var scroll = window.pageYOffset;
   if (scroll < 200) {
     header.style.background = "rgba(9, 24, 41, 0.9)";
-    header.style.boxShadow = "none";
   } else if (scroll >= 200 && scroll < 600) {
     header.style.background = "rgba(9, 24, 41)";
-    header.style.boxShadow = "0px 4px 8px 2px rgba(9,24,41,0.4)";
   }
 };
 
@@ -83,6 +81,36 @@ if (document.getElementById("mainPage")) {
   });
 }
 
+//Pagination
+if (document.getElementById("pagination")) {
+  const paginationContainer = document.querySelector(".pagination ul");
+  const totalPages = 3;
+  const currentPage = 1;
+
+  for (let i = 1; i <= totalPages; i++) {
+    const li = document.createElement("li");
+    const link = document.createElement("a");
+    link.href = "#";
+    link.innerText = i;
+    li.appendChild(link);
+    if (i === currentPage) {
+      li.classList.add("active");
+    }
+    paginationContainer.appendChild(li);
+  }
+
+  paginationContainer.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (event.target.tagName === "A") {
+      const clickedPage = parseInt(event.target.innerText);
+      const activeLink = document.querySelector(".pagination li.active a");
+      activeLink.parentElement.classList.remove("active");
+      event.target.parentElement.classList.add("active");
+      currentPage = clickedPage;
+      // update content on the page based on the new currentPage value
+    }
+  });
+}
 //Sliders
 if (document.getElementById("mainPage")) {
   const swiper = new Swiper(".main-hero .mySwiper", {
